@@ -45,7 +45,7 @@ class NewToolTest(BaseTool):
             # write code for tool functionality
             tool_token=self.get_tool_config("NEWTOOLTOKEN")
             newtooltest_helper=NewToolTestHelper(tool_token)
-            result=get_result(title)
+            result=newtooltest_helper.get_result(title)
             return "Tested Succesfully"
         except:
             return "failed to test"
