@@ -30,6 +30,9 @@ class NewToolTest(BaseTool):
     )
     args_schema: Type[NewToolTestSchema]=NewToolTestSchema
 
+    class Config:
+        arbitrary_types_allowed = True
+        
     def _execute(self,title: str):
         """
             Execute  the NewToolTest tool.
